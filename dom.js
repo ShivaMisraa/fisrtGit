@@ -19,3 +19,40 @@ var header= document.getElementById('main-header');
 // console.log(headerTitle.innerText);
 // headerTitle.innerHTML = '<h3>Hello</h3>';
 header.style.borderBottom = 'solid 3px #000';
+
+
+// get element by class name
+var items= document.getElementsByClassName('list-group-item');
+// items[0].style.fontWeight="bold"
+// items[1].style.fontWeight="bold"
+// items[2].style.fontWeight="bold"
+items[2].style.backgroundColor="Green"
+// items[3].style.fontWeight="bold"
+for (var i=0; i< items.length;i++){
+    items[i].style.fontWeight="bold"
+}
+
+
+// GETELEMENTSBYTAGNAME it simply do the same as doing above //
+// var li= document.getElementsByTagName('li');
+// console.log(li);
+// console.log(11[1]);
+// li[1].textContent 'Hello 2¹;
+// li[1].style.fontweight = "bold";
+// 11[1].style.backgroundColor = "yellow";
+// // Gives error
+// //items.style.backgroundColor="#f4f4f4";
+// for(var i = 0; i < li.length; i++){
+// li[i].style.backgroundColor='#f4f4f4';
+// )
+// QUERYSELECTOR //
+
+
+
+
+
+
+
+
+
+
