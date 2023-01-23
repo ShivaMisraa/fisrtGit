@@ -50,7 +50,7 @@ var header= document.querySelector('main-header')
 var input= document.querySelector('input')
 input.value='hello'
 var seconditem = document.querySelector('.list-group-item:nth-child(2)');
-seconditem.style.backgroundColor='green';
+// seconditem.style.backgroundColor='green';
 var thirditem = document.querySelector('.list-group-item:nth-child(3)');
 thirditem.style.fontColor='white';
 
@@ -65,9 +65,24 @@ var even =document.querySelectorAll('li:nth-child(even)');
 // even[i].style.backgroundColor='#ccc';
 // }
 
+// parentNode
+
+var itemList= document.querySelector("#items");
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backfroundColor= "#rgb(244,244,244)"
 
 
+//parent Element 
 
 
-
+var newDiv=document.createElement('div');
+newDiv.className='Hello';
+newDiv.id='hello1';
+newDiv.setAttribute('title','Hello Div');
+var newDivText=document.createTextNode('Hello World');
+newDiv.appendChild(newDivText);
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+console.log(newDiv);
+container.insertBefore(newDiv, h1);
 
