@@ -40,6 +40,20 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
+  function onSubmit(e) {
+    e.preventDefault();
+    const inputValue = document.getElementById(item).value;
+    const description = document.getElementById(description).value;
+    const li = document.createElement('li');
+
+    li.className= list-group-item;
+    const newText = document.createTextNode(inputValue)
+    const descriptionNode = document.createTextNode(description)
+  
+    li.appendChild(newText);
+    li.appendChild(descriptionNode);
+    deleteBtn.appendChild(document.createTextNode("X"))
+};
 }
 
 // Remove item
@@ -51,3 +65,22 @@ function removeItem(e){
     }
   }
 }
+
+// filter items
+function filterItems(e){
+  // converting text to lowercase
+const text = e.target.value.toLowerCase();
+// getting list
+const items= item.getElementsByTagName('li')
+// converting items from HTML collection to array
+Array.from(items).forEach(function(item) {
+const itemName = item.firstChild.textContent;
+const description = item.childNodes[1].textContent;
+if(itemName.toLowerCase().indexOf(text)!= -1 || description.toLowerCase().indexOf(text)!=-1){
+  item.style.display="block";
+} else {
+  item.style.display `none`;
+}
+})
+}
+
